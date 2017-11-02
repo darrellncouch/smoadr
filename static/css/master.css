@@ -1,0 +1,132 @@
+
+.top-span{
+
+  background-image: url('/images/phx.JPG');
+  background-size: cover;
+
+  /*background: #1CB5E0;  / *fallback for old browsers*/
+  /*background: -webkit-linear-gradient(to right, );  /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to right, #000046, #1CB5E0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */*/
+
+  /*background: #000046;  /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.outline{
+
+      text-shadow:
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black;
+  }
+.gradient{
+  background: #000046;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.spacing{
+  width: 20% !important;
+}
+
+.logo{
+  color: white;
+  font-family: 'Source Serif Pro', serif;
+}
+
+.logo-top{
+  font-size: 5vw;
+  margin-top: 25%;
+  text-align: center;
+}
+
+.logo-bottom{
+  font-size: 5vw;
+  border-top: 1px solid white;
+  text-align: center;
+}
+
+.logo-box{
+ text-align: center;
+ padding-top: 13% !important;
+ padding-bottom: 15% !important;
+ white-space: nowrap;
+
+}
+
+.border{
+  border: 1px solid #aeb5c1;
+  text-align: center;
+}
+
+.top-row{
+  margin-top: 50px;
+}
+
+.bottom-row{
+  background-color: #efefef;
+  /*height: 400px;*/
+}
+
+#map{
+  height: 150px;
+  padding: 20%;
+}
+
+/*Google fonts*/
+.serif{
+  font-family: 'Source Serif Pro', serif;
+}
+.anton{
+  font-family: 'Anton', sans-serif;
+}
+.quicksand{
+  font-family: 'Quicksand', sans-serif;
+}
+.able{
+  font-family: 'Abel', sans-serif;
+}
+.inline{
+  display: inline;
+  height: 20px;
+}
+.cstmbtn{
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.scale-pad-top{
+  padding-top: 5%;
+}
+
+.scale-pad-bottom{
+  padding-bottom: 5%;
+}
+.side-nav-item{
+  margin-left: 5px;
+}
+.custom-textarea{
+  border: 1px solid #b2b2b2;
+  height:300px;
+}
+
+iframe{
+  height: 255px !important;
+  max-width: 255px !important;
+}
+
+.noflow-y{
+  overflow-y: hidden !important;
+}
+
+.custom-modal{
+  width: 80% !important;
+}
+
+.margin-left{
+  margin-left: 50px !important;
+}
