@@ -1,0 +1,12 @@
+body{
+  background-image: url("/images/bkgnd.png");
+  background-size: contain;
+}
+
+.btn-full{
+  width: 100% !important;
+}
+
+.no-pad{
+  padding: 0px !important;
+}

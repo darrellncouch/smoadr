@@ -14,6 +14,9 @@
     <!-- master css -->
     <link rel="stylesheet" href="/css/master.css">
 
+    <!-- couch css -->
+    <link rel="stylesheet" href="/css/customMaterialize.css">
+
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
@@ -39,21 +42,34 @@
   <body>
 
     <!-- heading -->
-    <nav class="hide-on-med-and-down">
-      <div class="nav-wrapper gradient">
-      <ul id="nav-mobile" class=" hide-on-med-and-down quicksand ">
-        <li class="spacing center-align"><a href="#partners">Partners</a></li>
-        <li class="spacing center-align"><a class="modal-trigger" href="#modal1">Contact Us</a></li>
-        <li class="spacing center-align"><a class="modal-trigger" href="#modal2">Online Scheduling</a></li>
-        <li class="spacing center-align"><a href="#location">Location</a></li>
-        <li class="spacing center-align"><a href="#fee">Fee</a></li>
-      </ul>
-      </div>
-    </nav>
+      <nav class="hide-on-small-only">
+        <div class="nav-wrapper blue hide-on-small-only">
+        <ul id="nav-mobile" class=" hide-on-small-only quicksand ">
+          <li class="spacing center-align"><a href="#partners">Partners</a></li>
+          <li class="spacing center-align"><a class="modal-trigger" href="#email">Contact Us</a></li>
+          <li class="spacing center-align"><a class="modal-trigger nowrap" href="#scheduling">Scheduling</a></li>
+          <li class="spacing center-align"><a href="#location">Location</a></li>
+          <li class="spacing center-align"><a href="#fee">Fee</a></li>
+        </ul>
+        </div>
+      </nav>
+      <nav class="blue hide-on-med-and-up">
+        <div class="nav-wrapper ">
+          <ul id="slide-out" class="side-nav left hide-on-med-and-up">
+            <li><a href="#partners"><span class=" name">Partners</a></li>
+            <li><a href="#email" class="modal-trigger">Contact Us</a></li>
+            <li><a href="#scheduling" class="modal-trigger"><span class=" email">Online Scheduling</a></li>
+            <li><a href="#location">location</a></li>
+            <li><a href="#fee">Fee</a></li>
+          </ul>
+          <a href="#" data-activates="slide-out" class="button-collapse left "><i class="material-icons hide-on-med-and-up">menu</i></a>
+        </div>
+      </nav>
+
     <div class="row top-span">
       <div class="col l12 m12 s12  logo-box">
-          <span class="logo logo-top outline">Scott, Skelly & Muchmore L.L.C.</span><br>
-          <span class="logo logo-bottom outline">Mediation and Arbitration Services</span>
+          <span class="logo logo-top ">Scott, Skelly & Muchmore L.L.C.</span><br>
+          <span class="logo logo-bottom ">Mediation and Arbitration Services</span>
       </div>
     </div>
 
@@ -72,12 +88,12 @@
             <img src="/images/scott.jpg"  class="responsive-img">
           </div>
           <div class="card-stacked">
-            <span class="card-title serif ">Hon. Stephen H. Scott</span>
+            <span class="card-title serif "><%= partners[0].title %> <%= partners[0].first_name %> <%= partners[0].middle_initial %>. <%=partners[0].last_name %> </span>
             <div class="card-content">
               <p>Stephen H. Scott is a former judge on the Arizona Superior Court in Maricopa County, Arizona, who now serves full-time as a mediator, arbitrator, appraisal umpire and discovery master.</p>
             </div>
             <div class="card-action">
-              <a href="#" class="btn blue darken-2" style='width: 100%;'>More</a>
+              <a href="/partner/<%= partners[0].id %>" class="btn blue darken-2" style='width: 100%;'>More</a>
             </div>
           </div>
         </div>
@@ -90,12 +106,12 @@
             <img src="/images/skelly.jpg">
           </div>
           <div class="card-stacked">
-            <span class="card-title serif">Hon. Christopher M. Skelly</span>
+            <span class="card-title serif "><%= partners[1].title %> <%= partners[1].first_name %> <%= partners[1].middle_initial %>. <%=partners[1].last_name %> </span>
             <div class="card-content">
               <p>Christopher M. Skelly conducts mediations and arbitrations and serves as a special master and discovery master in civil cases. He also serves as an insurance appraisal umpire.</p>
             </div>
             <div class="card-action">
-              <a href="#" class="btn blue darken-2" style='width: 100%;'>More</a>
+              <a href="/partner/<%= partners[1].id %>" class="btn blue darken-2" style='width: 100%;'>More</a>
             </div>
           </div>
         </div>
@@ -108,12 +124,12 @@
             <img src="/images/muchmore.jpg"  class="responsive-img">
           </div>
           <div class="card-stacked">
-            <span class="card-title serif">Charles J. Muchmore</span>
+            <span class="card-title serif "><%= partners[2].title %> <%= partners[2].first_name %> <%= partners[2].middle_initial %>. <%=partners[2].last_name %> </span>
             <div class="card-content">
               <p>Charles J. Muchmore has broad and varied litigation and ADR experience that includes handling professional liability, personal injury, product liability, construction, insurance coverage, and commercial litigation matters.</p>
             </div>
             <div class="card-action">
-              <a href="/:member" class="btn blue darken-2" style='width: 100%; '>More</a>
+              <a href="/partner/<%= partners[2].id %>" class="btn blue darken-2" style='width: 100%; '>More</a>
             </div>
           </div>
         </div>
@@ -121,37 +137,36 @@
 
       <!-- partner 1 small only -->
       <div class="col s12">
-        <a href="/:member" class="btn blue darken-2 hide-on-med-and-up" style="width: 100%; margin-top:10px; margin-bottom: 10px;">Hon. Stephen H. Scott</a>
+        <a href="/partner/<%= partners[0].id %>" class="btn blue darken-2 hide-on-med-and-up" style="width: 100%; margin-top:10px; margin-bottom: 10px;">Hon. Stephen H. Scott</a>
       </div>
       <!-- partner 2 small only -->
       <div class="col s12">
-        <a href="/:member" class="btn blue darken-2 hide-on-med-and-up" style="width: 100%; margin-top:10px; margin-bottom: 10px;">Hon. Christopher M. Skelly</a>
+        <a href="/partner/<%= partners[1].id %>" class="btn blue darken-2 hide-on-med-and-up" style="width: 100%; margin-top:10px; margin-bottom: 10px;">Hon. Christopher M. Skelly</a>
       </div>
 
       <!-- partner 3 small only -->
       <div class="col s12">
-        <a href="/:member" class="btn blue darken-2 hide-on-med-and-up" style="width: 100%;margin-top:10px; margin-bottom: 10px;">Charles J. Muchmore</a>
+        <a href="/partner/<%= partners[2].id %>" class="btn blue darken-2 hide-on-med-and-up" style="width: 100%;margin-top:10px; margin-bottom: 10px;">Charles J. Muchmore</a>
       </div>
     </div>
 
   <!--buttons -->
     <!-- contact us -->
     <div class="row bottom-row">
-      <div class="col s12 m6 l6 border ">
+      <div class="col s12 m6 l6 icons-border ">
         <a class="modal-trigger" href="#modal1"><i class="material-icons large blue-text scale-pad-top" >mail</i></a>
         <h4 class="center-align scale-pad-bottom">Contact us</h4>
-        <p></p>
       </div>
 
       <!-- scheduling  -->
-      <div class="col s12 m6 l6 border">
-        <a class="modal-trigger" href="#modal2"><i class="material-icons large blue-text scale-pad-top">date_range</i></a>
+      <div class="col s12 m6 l6 icons-border">
+        <a class="modal-trigger" href="#scheduling"><i class="material-icons large blue-text scale-pad-top">date_range</i></a>
         <h4 class="center-align scale-pad-bottom">Online Scheduling</h4>
       </div>
 
 
       <!-- location -->
-      <div class="col s12 m12 l12 border">
+      <div class="col s12 m12 l12 icons-border">
         <i class="material-icons large blue-text" id="location">location_on</i>
         <h4 class="center-align">Location</h4>
         <p class="center-align">1313 E. Osborn Road #120, Phoenix, Arizona 85014</p>
@@ -183,7 +198,7 @@
   <!-- Modals -->
 
   <!-- contact -->
-  <div id="modal1" class="modal">
+  <div id="email" class="modal">
     <div class="modal-content">
       <div class="row">
         <h4>Send us an email</h4>
@@ -214,15 +229,17 @@
   </div>
 
   <!--schedule -->
-  <div id="modal2" class="modal custom-modal">
+  <div id="scheduling" class="modal custom-modal">
     <div class="modal-content">
-      <div class="row">
-        <h4>Online scheduling</h4>
+      <div class="row ">
+        <div class="col s12">
+          <h4 class="center-align">Online scheduling</h4>
 
-        <div class="row margin-left">
+        </div>
 
+        <div class="row">
 
-          <div class="col l3">
+          <div class="col s12 l4 center-align">
             <p class="center-align">Steve Scott</p>
             <iframe src="http://www.nadn.org/mycalendar-small.php?id=577414834&bg=FFFFFF&text=000000"></iframe>
             <div class="col s12">
@@ -230,7 +247,7 @@
             </div>
           </div>
 
-          <div class="col l3 offset-l1">
+          <div class="col s12  l4 center-align ">
             <p class="center-align" >Chris Skelly</p>
             <iframe src="http://www.nadn.org/mycalendar-small.php?id=121869450&bg=FFFFFF&text=000000"></iframe>
             <div class="col s12">
@@ -238,7 +255,7 @@
             </div>
           </div>
 
-          <div class="col l3 offset-l1">
+          <div class="col s12 l4 center-align ">
             <p class="center-align" >Charles Muchmore</p>
             <iframe src="http://www.nadn.org/mycalendar-small.php?id=159744438&bg=FFFFFF&text=000000"></iframe>
             <div class="col s12">

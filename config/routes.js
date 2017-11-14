@@ -4,8 +4,7 @@ module.exports = function(app){
 
   app.get('/', pages.index)
 
-  app.get('/:member', pages.partners)
+  app.get('/partner/:id', pages.partner)
 
-  app.get('/admin', pages.loginPage)
-
+  app.get('/content-management/admin/login', pages.login)
 }
