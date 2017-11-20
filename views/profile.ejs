@@ -41,15 +41,29 @@
   <body>
 
     <!-- heading -->
-    <nav class="hide-on-med-and-down">
-      <div class="nav-wrapper gradient">
-      <ul id="nav-mobile" class=" hide-on-med-and-down quicksand ">
-        <li class="spacing center-align"><a href="#partners">Partners</a></li>
-        <li class="spacing center-align"><a class="modal-trigger" href="#modal1">Contact Us</a></li>
-        <li class="spacing center-align"><a class="modal-trigger" href="#modal2">Online Scheduling</a></li>
-        <li class="spacing center-align"><a href="#location">Location</a></li>
-        <li class="spacing center-align"><a href="#fee">Fee</a></li>
+
+    <nav class="hide-on-small-only">
+      <div class="nav-wrapper blue hide-on-small-only">
+      <ul id="nav-mobile" class=" hide-on-small-only quicksand ">
+        <li class="spacing center-align"><a href="/#partners">Partners</a></li>
+        <li class="spacing center-align"><a class="modal-trigger" href="#email">Contact Us</a></li>
+        <li class="spacing center-align"><a class="modal-trigger nowrap" href="#scheduling">Scheduling</a></li>
+        <li class="spacing center-align"><a href="/#location">Location</a></li>
+        <li class="spacing center-align"><a href="/#fee">Fee</a></li>
       </ul>
+      </div>
+    </nav>
+
+    <nav class="blue hide-on-med-and-up">
+      <div class="nav-wrapper ">
+        <ul id="slide-out" class="side-nav left hide-on-med-and-up">
+          <li><a href="#partners"><span class=" name">Partners</a></li>
+          <li><a href="#email" class="modal-trigger">Contact Us</a></li>
+          <li><a href="#scheduling" class="modal-trigger"><span class=" email">Online Scheduling</a></li>
+          <li><a href="#location">location</a></li>
+          <li><a href="#fee">Fee</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse left "><i class="material-icons hide-on-med-and-up">menu</i></a>
       </div>
     </nav>
 
@@ -59,11 +73,13 @@
       <!-- picture and contact info -->
       <div class="col s12 m4 ">
         <div class="col s10 offset-s2">
-          <div class="col s8 offset-s1 card">
-            <img src="<%= partner.img %> " class="profile-pic responsive-img" alt="">
+          <div class="col s7 offset-s1 card">
+            <img src="<%= partner.img %> " class="profile-pic center-align responsive-img" alt="">
           </div>
-          <div class="col s10 offset-s1">
+          <div class="col s10">
             <h5 class="serif"><%= partner.title %> <%= partner.first_name %> <%= partner.middle_initial %>. <%= partner.last_name %></h5>
+            <h6 class="serif"><b><a href="<%= partner.email %>"><%= partner.email %></a></b></h6>
+            <h6 class="serif"><b>(602) 277-8228</b></h6>
           </div>
         </div>
       </div>
@@ -80,8 +96,82 @@
     </div>
 
     <div class="row">
-      <div class="col s2 offset-s5 center-align">
+      <div class="col s12  center-align">
         <img src="/images/NADNCrest.gif" alt="">
+      </div>
+    </div>
+
+    <!-- Modals -->
+
+    <!-- contact -->
+    <div id="email" class="modal">
+      <div class="modal-content">
+
+        <div class="row">
+          <h4>Send us an email</h4>
+          <form class="col s12">
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="first_name">Your Email Address</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="icon_prefix2" class="custom-textarea"></textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="inout-field col s12">
+                <input type="submit" name="" value="Send" class="btn blue right">
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--schedule -->
+    <div id="scheduling" class="modal custom-modal">
+      <div class="modal-content">
+        <div class="row ">
+
+          <div class="col s12">
+            <h4 class="center-align">Online scheduling</h4>
+          </div>
+
+          <div class="row">
+
+            <div class="col s12 l4 center-align">
+              <p class="center-align">Steve Scott</p>
+              <iframe src="http://www.nadn.org/mycalendar-small.php?id=577414834&bg=FFFFFF&text=000000"></iframe>
+              <div class="col s12">
+                <img src="http://www.nadn.org/images/Cal-NADNKey.gif" border="0" width="231" height="62">
+              </div>
+            </div>
+
+            <div class="col s12  l4 center-align ">
+              <p class="center-align" >Chris Skelly</p>
+              <iframe src="http://www.nadn.org/mycalendar-small.php?id=121869450&bg=FFFFFF&text=000000"></iframe>
+              <div class="col s12">
+                <img src="http://www.nadn.org/images/Cal-NADNKey.gif" border="0" width="231" height="62">
+              </div>
+            </div>
+
+            <div class="col s12 l4 center-align ">
+              <p class="center-align" >Charles Muchmore</p>
+              <iframe src="http://www.nadn.org/mycalendar-small.php?id=159744438&bg=FFFFFF&text=000000"></iframe>
+              <div class="col s12">
+                <img src="http://www.nadn.org/images/Cal-NADNKey.gif" border="0" width="231" height="62">
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
 
