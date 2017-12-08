@@ -12,8 +12,10 @@ $(document).ready(function(){
     edge: 'left',
     closeOnClick: true,
     draggable: true,
-  }
-);
+  });
+
+  $('select').material_select();
+
 
 
 });

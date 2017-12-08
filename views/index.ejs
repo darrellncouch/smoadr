@@ -53,7 +53,7 @@
         </ul>
         </div>
       </nav>
-      
+
       <nav class="blue hide-on-med-and-up">
         <div class="nav-wrapper ">
           <ul id="slide-out" class="side-nav left hide-on-med-and-up">
@@ -80,61 +80,62 @@
         <h4 class="able">Partners</h4>
       </div>
     </div>
-    <div class="row top-row ">
+    <div class="row">
+
+
+
 
       <!-- partner 1  med and up-->
-      <div class="col l6 m12 hide-on-small-only">
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="/images/scott.jpg"  class="responsive-img">
+      <div class="col m4 l4 hide-on-small-only ">
+        <div class="row">
+          <div class="col s12">
+            <img src="<%= partners[0].img %>" alt="" class="img img-size">
           </div>
-          <div class="card-stacked">
-            <span class="card-title serif "><%= partners[0].title %> <%= partners[0].first_name %> <%= partners[0].middle_initial %>. <%=partners[0].last_name %> </span>
-            <div class="card-content">
-              <p>Stephen H. Scott is a former judge on the Arizona Superior Court in Maricopa County, Arizona, who now serves full-time as a mediator, arbitrator, appraisal umpire and discovery master.</p>
-            </div>
-            <div class="card-action">
-              <a href="/partner/<%= partners[0].id %>" class="btn blue darken-2" style='width: 100%;'>More</a>
-            </div>
+        </div>
+        <div class="row">
+          <h5 class="center-align serif">
+            <%= partners[0].title %> <%= partners[0].first_name %> <%= partners[0].middle_initial %>. <%=partners[0].last_name %>
+          </h5>
+          <div class="col m12 l8 offset-l2">
+            <a class="waves-effect waves-light blue darken-2 btn centerbtn" href="/partner/<%= partners[0].id %>">More</a>
           </div>
         </div>
       </div>
 
       <!-- partner 2 -->
-      <div class="col l6 m12 hide-on-small-only">
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="/images/skelly.jpg">
+      <div class="col m4 l4 hide-on-small-only ">
+        <div class="row">
+          <div class="col s12">
+            <img src="<%= partners[1].img %>" alt="" class="img img-size">
           </div>
-          <div class="card-stacked">
-            <span class="card-title serif "><%= partners[1].title %> <%= partners[1].first_name %> <%= partners[1].middle_initial %>. <%=partners[1].last_name %> </span>
-            <div class="card-content">
-              <p>Christopher M. Skelly conducts mediations and arbitrations and serves as a special master and discovery master in civil cases. He also serves as an insurance appraisal umpire.</p>
-            </div>
-            <div class="card-action">
-              <a href="/partner/<%= partners[1].id %>" class="btn blue darken-2" style='width: 100%;'>More</a>
-            </div>
+        </div>
+        <div class="row">
+          <h5 class="center-align serif">
+            <%= partners[1].title %> <%= partners[1].first_name %> <%= partners[1].middle_initial %>. <%=partners[1].last_name %>
+          </h5>
+          <div class="col m12 l8 offset-l2">
+            <a class="waves-effect waves-light blue darken-2 btn centerbtn" href="/partner/<%= partners[1].id %>">More</a>
           </div>
         </div>
       </div>
 
       <!-- partner 3 -->
-      <div class="col l6 m12 hide-on-small-only offset-l3">
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="/images/muchmore.jpg"  class="responsive-img">
+      <div class="col m4 l4 hide-on-small-only ">
+        <div class="row">
+          <div class="col s12">
+            <img src="<%= partners[2].img %>" alt="" class="img img-size">
           </div>
-          <div class="card-stacked">
-            <span class="card-title serif "><%= partners[2].title %> <%= partners[2].first_name %> <%= partners[2].middle_initial %>. <%=partners[2].last_name %> </span>
-            <div class="card-content">
-              <p>Charles J. Muchmore has broad and varied litigation and ADR experience that includes handling professional liability, personal injury, product liability, construction, insurance coverage, and commercial litigation matters.</p>
-            </div>
-            <div class="card-action">
-              <a href="/partner/<%= partners[2].id %>" class="btn blue darken-2" style='width: 100%; '>More</a>
-            </div>
+        </div>
+        <div class="row">
+          <h5 class="center-align serif">
+            <%= partners[2].title %> <%= partners[2].first_name %> <%= partners[2].middle_initial %>. <%=partners[2].last_name %>
+          </h5>
+          <div class="col m12 l8 offset-l2">
+            <a class="waves-effect waves-light blue darken-2 btn centerbtn" href="/partner/<%= partners[2].id %>">More</a>
           </div>
         </div>
       </div>
+
 
       <!-- partner 1 small only -->
       <div class="col s12">
@@ -149,13 +150,14 @@
       <div class="col s12">
         <a href="/partner/<%= partners[2].id %>" class="btn blue darken-2 hide-on-med-and-up" style="width: 100%;margin-top:10px; margin-bottom: 10px;">Charles J. Muchmore</a>
       </div>
+
     </div>
 
   <!--buttons -->
     <!-- contact us -->
     <div class="row bottom-row">
       <div class="col s12 m6 l6 icons-border ">
-        <a class="modal-trigger" href="#modal1"><i class="material-icons large blue-text scale-pad-top" >mail</i></a>
+        <a class="modal-trigger" href="#email"><i class="material-icons large blue-text scale-pad-top" >mail</i></a>
         <h4 class="center-align scale-pad-bottom">Contact us</h4>
       </div>
 
@@ -199,18 +201,31 @@
   <!-- Modals -->
 
   <!-- contact -->
-  <div id="email" class="modal">
+  <div id="email" class="modal custom-modal">
     <div class="modal-content">
       <div class="row">
         <h4>Send us an email</h4>
         <form class="col s12">
 
           <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
-              <label for="first_name">Your Email Address</label>
+            <div class="col s12">
+              <div class="input-field col s6">
+                <select>
+                  <option value="" disabled selected>Recipient</option>
+                    <% for(let i =0; i < partners.length; i++){%>
+                        <option class="blue-text" value="<%= partners[i].email %>"><%= partners[i].first_name %> <%= partners[i].middle_initial %>. <%=partners[i].last_name %></option>
+                    <%}%>
+                  <option class="blue-text" value="dlegge@ssmadr.com">Debra Legge</option>
+                </select>
+              </div>
+              <div class="input-field col s6">
+                <input id="email" type="email" placeholder="Your Email Address" class="border">
+              </div>
             </div>
-          </div>
+            </div>
+
+
+
 
           <div class="row">
             <div class="input-field col s12">

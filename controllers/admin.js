@@ -18,8 +18,14 @@ module.exports = {
   },
 
   home: (req, res)=>{
-    res.render('admin')
-  }
+    knex('partners')
+      .then((results)=>{
+        knex('bios')
+          .then((bios)=>{
+            res.render('admin', {partners: results, bios: bios})
+          })
+      })
+  },
 
 
 }

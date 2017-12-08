@@ -36,15 +36,39 @@
     <title>SSMADR Admin</title>
   </head>
   <body>
-    <ul id='nav-moble' class="side-nav fixed scale-pad-bottom">
-      <div class="row">
-        <div class="col s12 blue darken-4">
-          <h5 class="white-text ">Admin Portal</h5>
+
+    <ul id="slide-out" class="side-nav fixed tabs">
+      <div class="col s12 blue">
+        <h4 class="white-text">Admin Portal</h4>
+      </div>
+      <% for(let i = 0; i < partners.length; i++){%>
+        <li class=""><a href="#<%= partners[i].id %>"><%=partners[i].first_name %> <%= partners[i].last_name %></a></li>
+      <%}%>
+  </ul>
+
+  <div class="row">
+
+    <% for(let i = 0; i < partners.length; i++){%>
+
+        <div id="<%= partners.id %>" class="col s12">
+          <%for(let j = 0; j < bios.lenght; j++){%>
+            Test 1
+          <%}%>
         </div>
-        <li class='side-nav-item'>partner 1</li>
-        <li class='side-nav-item'>partner 2</li>
-        <li class='side-nav-item'>partner 3</li>
-    </ul>
+
+    <%}%>
+
+
+      <% for(let i = 0; i < bios.length; i++){%>
+        <div class="col s8  offset-s3">
+          <textarea class="custom-textarea">
+            <%= bios[i].paragraph %>
+          </textarea>
+        </div>
+      <%}%>
+
+
+  </div>
 
 
 

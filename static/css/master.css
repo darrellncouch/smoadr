@@ -112,7 +112,7 @@
 }
 .custom-textarea{
   border: 1px solid #b2b2b2;
-  height:300px;
+  height:200px;
 }
 
 iframe{
@@ -128,6 +128,7 @@ iframe{
 .custom-modal{
   width: 95% !important;
 }
+
 
 .margin-left{
   margin-left: 9% !important;
@@ -195,4 +196,71 @@ iframe{
 
 .nav-color{
   background-color: #2196f3 !important;
+}
+
+ul.dropdown-content.select-dropdown li span {
+    color: #1e88e5; /* no need for !important :) */
+}
+.img-size{
+  height: 225px;
+  width: 160px;
+}
+.img{
+  margin-left: 31%;
+}
+
+@media screen and (max-width: 1250px){
+  .img{
+    margin-left: 27%;
+  }
+}
+@media screen and (max-width: 1180px){
+  .img{
+    margin-left: 25%;
+  }
+}
+@media screen and (max-width: 1030px){
+  .img{
+    margin-left: 23%;
+  }
+}
+@media screen and (max-width: 992px){
+  .img{
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width: 850px){
+  .img{
+    margin-left: 18%;
+  }
+}
+@media screen and (max-width: 790px){
+  .img{
+    margin-left: 11%;
+  }
+}
+@media screen and (max-width: 700px){
+  .img{
+    margin-left: 8%;
+  }
+}
+@media screen and (max-width: 600px){
+  .img{
+    margin-left: 36%;
+  }
+}
+@media screen and (max-width: 525px){
+  .img{
+    margin-left: 35%;
+  }
+}
+@media screen and (max-width: 480px){
+  .img{
+    margin-left: 34%;
+  }
+}
+@media screen and (max-width: 420px){
+  .img{
+    margin-left: 30%;
+  }
 }

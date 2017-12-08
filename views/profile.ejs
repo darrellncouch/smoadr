@@ -45,7 +45,7 @@
     <nav class="hide-on-small-only">
       <div class="nav-wrapper blue hide-on-small-only">
       <ul id="nav-mobile" class=" hide-on-small-only quicksand ">
-        <li class="spacing center-align"><a href="/#partners">Partners</a></li>
+        <li class="spacing center-align"><a href="/#partner">Partners</a></li>
         <li class="spacing center-align"><a class="modal-trigger" href="#email">Contact Us</a></li>
         <li class="spacing center-align"><a class="modal-trigger nowrap" href="#scheduling">Scheduling</a></li>
         <li class="spacing center-align"><a href="/#location">Location</a></li>
@@ -57,11 +57,11 @@
     <nav class="blue hide-on-med-and-up">
       <div class="nav-wrapper ">
         <ul id="slide-out" class="side-nav left hide-on-med-and-up">
-          <li><a href="#partners"><span class=" name">Partners</a></li>
+          <li><a href="/#partners"><span class=" name">Partners</a></li>
           <li><a href="#email" class="modal-trigger">Contact Us</a></li>
           <li><a href="#scheduling" class="modal-trigger"><span class=" email">Online Scheduling</a></li>
-          <li><a href="#location">location</a></li>
-          <li><a href="#fee">Fee</a></li>
+          <li><a href="/#location">location</a></li>
+          <li><a href="/#fee">Fee</a></li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse left "><i class="material-icons hide-on-med-and-up">menu</i></a>
       </div>
@@ -77,7 +77,7 @@
             <img src="<%= partner.img %> " class="profile-pic center-align responsive-img" alt="">
           </div>
           <div class="col s10">
-            <h5 class="serif"><%= partner.title %> <%= partner.first_name %> <%= partner.middle_initial %>. <%= partner.last_name %></h5>
+            <h5 class="serif nowrap"><%= partner.title %> <%= partner.first_name %> <%= partner.middle_initial %>. <%= partner.last_name %></h5>
             <h6 class="serif"><b><a href="<%= partner.email %>"><%= partner.email %></a></b></h6>
             <h6 class="serif"><b>(602) 277-8228</b></h6>
           </div>
