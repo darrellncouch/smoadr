@@ -229,9 +229,14 @@ ul.dropdown-content.select-dropdown li span {
     margin-left: 20%;
   }
 }
-@media screen and (max-width: 850px){
+@media screen and (max-width: 900px){
   .img{
     margin-left: 18%;
+  }
+}
+@media screen and (max-width: 830px){
+  .img{
+    margin-left: 14%;
   }
 }
 @media screen and (max-width: 790px){
@@ -244,23 +249,13 @@ ul.dropdown-content.select-dropdown li span {
     margin-left: 8%;
   }
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 675px){
   .img{
-    margin-left: 36%;
+    margin-left: 3%;
   }
 }
-@media screen and (max-width: 525px){
+@media screen and (max-width: 630px){
   .img{
-    margin-left: 35%;
-  }
-}
-@media screen and (max-width: 480px){
-  .img{
-    margin-left: 34%;
-  }
-}
-@media screen and (max-width: 420px){
-  .img{
-    margin-left: 30%;
+    margin-left: 1%;
   }
 }
