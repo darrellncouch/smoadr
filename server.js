@@ -2,10 +2,14 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 8000;
+const cors = require('cors')
+const port = process.env.PORT || 8080;
+
+app.use(cors())
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/static'));
+
 
 app.set('view engine', 'ejs');
 

@@ -13,9 +13,13 @@ module.exports = function(app){
 
   app.post('/auth', admin.auth )
 
+  app.get('/partners', pages.partners)
+
   app.use(userAuth);
 
   app.get('/content-management', admin.home)
+
+
 
 
 

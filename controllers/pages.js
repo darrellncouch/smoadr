@@ -25,7 +25,16 @@ module.exports = {
     })
   },
 
-  login: (req, res)=>{res.render('login')},
+  partners: (req, res, next) => {
+    knex('partners')
+      .select()
+      .then(partners => res.json(partners))
+  },
+
+
+  login: (req, res) => {
+    res.render('login')
+  },
 
 
 }

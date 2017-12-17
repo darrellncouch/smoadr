@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
     table.string('title');
     table.string('email');
     table.string('img');
+    table.boolean('selected')
   })
 };
 
