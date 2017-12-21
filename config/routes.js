@@ -17,9 +17,15 @@ module.exports = function(app){
 
   app.put('/select/:id', pages.select)
 
+  app.use((req, res, next)=>{
+    res.render('404')
+  })
+
   app.use(userAuth);
 
   app.get('/content-management', admin.home)
+
+
 
 
 
