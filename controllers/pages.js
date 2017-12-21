@@ -41,10 +41,7 @@ module.exports = {
             res.json(partners)
           })
       })
-  }
-
-
-
+  },
 
   login: (req, res) => {
     res.render('login')
