@@ -1,4 +1,4 @@
-  
+
 .top-span{
 
   background-image: url('/images/phx.JPG');
@@ -204,6 +204,10 @@ ul.dropdown-content.select-dropdown li span {
 .img-size{
   height: 225px;
   width: 160px;
+}
+.secondary-img-size{
+  height: 225px;
+  width: 175px;
 }
 .img{
   margin-left: 31%;
