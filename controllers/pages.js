@@ -31,6 +31,20 @@ module.exports = {
       .then(partners => res.json(partners))
   },
 
+  select: (req, res, next)=>{
+    knex('partners')
+      .update('selected', true)
+      .where('id', req.params.id)
+      .then((results)=>{
+        knex('partners')
+          .then((partners)=>{
+            res.json(partners)
+          })
+      })
+  }
+
+
+
 
   login: (req, res) => {
     res.render('login')

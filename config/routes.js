@@ -15,6 +15,8 @@ module.exports = function(app){
 
   app.get('/partners', pages.partners)
 
+  app.put('/select/:id', pages.select)
+
   app.use(userAuth);
 
   app.get('/content-management', admin.home)
