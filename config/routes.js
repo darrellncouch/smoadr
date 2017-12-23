@@ -15,15 +15,17 @@ module.exports = function(app){
 
   app.get('/partners', pages.partners)
 
-  app.put('/select/:id', pages.select)
-
-  app.use((req, res, next)=>{
-    res.render('404')
-  })
+  app.patch('/select/:id', pages.select)
 
   app.use(userAuth);
 
   app.get('/content-management', admin.home)
+
+
+    app.use((req, res, next)=>{
+      res.render('404')
+    })
+
 
 
 

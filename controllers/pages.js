@@ -25,22 +25,38 @@ module.exports = {
     })
   },
 
+//API ROUTES
+  //GET PARTNERS INFO
   partners: (req, res, next) => {
     knex('partners')
       .select()
+      .orderBy('id')
       .then(partners => res.json(partners))
   },
 
+  //SELECT PARTNER
   select: (req, res, next)=>{
     knex('partners')
-      .update('selected', true)
-      .where('id', req.params.id)
-      .then((results)=>{
+      .update('selected', false)
+      .where('selected', true )
+      .then((result)=>{
         knex('partners')
-          .then((partners)=>{
-            res.json(partners)
+          .update('selected', true)
+          .where('id', req.params.id)
+          .then((results)=>{
+            knex('partners')
+              .orderBy('id')
+              .then((partners)=>{
+                knex('bios')
+                  .where('partner_id', req.params.id)
+                  .orderBy('id')
+                  .then((paragraphs)=>{
+                    res.json(partners.concat(paragraphs))
+                  })
+              })
           })
       })
+
   },
 
   login: (req, res) => {
