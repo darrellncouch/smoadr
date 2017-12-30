@@ -41,7 +41,7 @@ module.exports = {
       .where('selected', true )
       .then((result)=>{
         knex('partners')
-          .update('selected', true)
+          .update('selected', true) 
           .where('id', req.params.id)
           .then((results)=>{
             knex('partners')
