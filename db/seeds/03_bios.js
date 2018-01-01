@@ -13,7 +13,7 @@ exports.seed = function(knex, Promise) {
 
         {partner_id: 2, paragraph: "Mr. Muchmore practiced law with the firm of O’Connor, Cavanagh, Anderson, Westover, Killingsworth and Beshears for 17 years. His practice focused almost exclusively on litigation involving insurance defense, including personal injury, professional liability, and insurance coverage disputes. In 1993 he formed Muchmore & Wallwork and Mr. Muchmore began representing plaintiffs in personal injury, professional liability and insurance coverage disputes. In 2003 Mr. Muchmore became Of Counsel at Burch & Cracchiolo, PA where he continued his litigation practice and expanded his ADR practice.  "},
 
-        {partner_id: 2, paragraph: "In January 2015, Mr. Muchmore ceased his litigation practice in order to be a full time neutral with the preeminent Phoenix ADR firm of Scott & Skelly LLC, now Scott, Skelly & Muchmore, LLC. "},
+        {partner_id: 2, paragraph: "In January 2015, Mr. Muchmore ceased his litigation practice in order to be a full time neutral with the preeminent Phoenix ADR firm of Scott & Skelly LLC, now Skelly, Muchmore & Oberbillig, LLC. "},
 
         {partner_id: 2, paragraph: "Mr. Muchmore attended undergraduate school at New Mexico Highlands University, graduating cum laude in 1972 and graduated from the University of New Mexico School of Law in 1976. He is a member of the American Bar Association (Section of Dispute Resolution), the Arizona Bar Association (Litigation and Alternative Dispute Resolution Sections), and the Maricopa County Bar Association (Personal Injury/Negligence Section). Mr. Muchmore is admitted to practice in all courts in the State of Arizona, the Ninth Circuit Court of Appeals, and the Supreme Court of the United States.   "},
 
