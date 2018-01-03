@@ -107,19 +107,34 @@
     <!-- Modals -->
 
     <!-- contact -->
-    <div id="email" class="modal">
+    <div id="email" class="modal custom-modal">
       <div class="modal-content">
-
         <div class="row">
-          <h4>Send us an email</h4>
-          <form class="col s12">
+          <h4>Contact Information</h4>
+          <p><b>Phone: </b> (602) 277-8228</p>
+          <p><b>Scheduling:</b> dlegge@smoadr.com</p>
+          <p><b><%= partners[0].title %> <%= partners[0].first_name %> <%= partners[0].middle_initial %>. <%=partners[0].last_name %>:</b> <%= partners[0].email %></p>
+          <p><b><%= partners[1].title %> <%= partners[1].first_name %> <%= partners[1].middle_initial %>. <%=partners[1].last_name %>:</b> <%= partners[1].email %></p>
+          <p><b><%= partners[2].title %> <%= partners[2].first_name %> <%= partners[2].middle_initial %>. <%=partners[2].last_name %>:</b> <%= partners[2].email %></p>
+
+          <!-- <form class="col s12">
 
             <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="first_name">Your Email Address</label>
+              <div class="col s12">
+                <div class="input-field col s6">
+                  <select>
+                    <option value="" disabled selected>Recipient</option>
+                      <% for(let i =0; i < partners.length; i++){%>
+                          <option class="blue-text" value="<%= partners[i].email %>"><%= partners[i].first_name %> <%= partners[i].middle_initial %>. <%=partners[i].last_name %></option>
+                      <%}%>
+                    <option class="blue-text" value="dlegge@ssmadr.com">Scheduling</option>
+                  </select>
+                </div>
+                <div class="input-field col s6">
+                  <input id="email" type="email" placeholder="Your Email Address" class="border">
+                </div>
               </div>
-            </div>
+              </div>
 
             <div class="row">
               <div class="input-field col s12">
@@ -133,7 +148,7 @@
               </div>
             </div>
 
-          </form>
+          </form> -->
         </div>
       </div>
     </div>
@@ -149,17 +164,9 @@
 
           <div class="row">
 
-            <div class="col s12 l4 center-align">
-              <p class="center-align">Steve Scott</p>
-              <iframe src="http://www.nadn.org/mycalendar-small.php?id=577414834&bg=FFFFFF&text=000000"></iframe>
-              <div class="col s12">
-                <img src="http://www.nadn.org/images/Cal-NADNKey.gif" border="0" width="231" height="62">
-              </div>
-            </div>
-
             <div class="col s12  l4 center-align ">
-              <p class="center-align" >Chris Skelly</p>
-              <iframe src="http://www.nadn.org/mycalendar-small.php?id=121869450&bg=FFFFFF&text=000000"></iframe>
+              <p class="center-align" >Christopher Skelly</p>
+              <iframe src="http://www.nadn.org/mycalendar-small.php?id=577414834&bg=FFFFFF&text=000000"></iframe>
               <div class="col s12">
                 <img src="http://www.nadn.org/images/Cal-NADNKey.gif" border="0" width="231" height="62">
               </div>
@@ -173,10 +180,19 @@
               </div>
             </div>
 
+            <div class="col s12 l4 center-align">
+              <p class="center-align">Robert Oberbillig</p>
+              <iframe src="http://www.nadn.org/mycalendar-small.php?id=605446516&bg=FFFFFF&text=000000"></iframe>
+              <div class="col s12">
+                <img src="http://www.nadn.org/images/Cal-NADNKey.gif" border="0" width="231" height="62">
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
+
 
     <!-- fee -->
     <div id="fee" class="modal custom-modal">
