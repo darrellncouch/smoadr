@@ -1,4 +1,17 @@
-@import "./components/Header";
-@import "./components/NavBar";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-@import "./typeography";
+@import "base/animations";
+@import "base/base";
+@import "base/typeography";
+@import "base/utilities";
+
+@import "components/navBar";
+
+@import "pages/home";
+@import "pages/profile";
+@import "pages/admin";
+
+@import "layout/header";
+

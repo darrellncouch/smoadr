@@ -6,11 +6,11 @@ class NavBar extends Component {
         <nav className="hide-on-small-only">
           <div className="nav-wrapper blue hide-on-small-only">
             <ul id="nav-mobile" className=" hide-on-small-only quicksand ">
-              <li className="spacing center-align"><a href="#members">Members</a></li>
-              <li className="spacing center-align"><a className="modal-trigger" href="#email">Contact Us</a></li>
-              <li className="spacing center-align"><a className="modal-trigger nowrap" href="#scheduling">Scheduling</a></li>
-              <li className="spacing center-align"><a href="#location">Location</a></li>
-              <li className="spacing center-align"><a href="#fee" className="modal-trigger">Fees</a></li>
+              <li className="spacing center-align nav-text"><a href="#members">Members</a></li>
+              <li className="spacing center-align nav-text"><a className="modal-trigger" href="#email">Contact Us</a></li>
+              <li className="spacing center-align nav-text"><a className="modal-trigger nowrap" href="#scheduling">Scheduling</a></li>
+              <li className="spacing center-align nav-text"><a href="#location">Location</a></li>
+              <li className="spacing center-align nav-text"><a href="#fee" className="modal-trigger">Fees</a></li>
             </ul>
           </div>
         </nav>
