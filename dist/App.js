@@ -17,8 +17,9 @@ class App {
     //api
     routes() {
         const router = express.Router();
-        router.get('/start/of/api/route', (req, res) => {
-            //your logic here
+        router.get('/api/doSomthing', (req, res) => {
+            console.log("did something");
+            res.sendStatus(200);
         });
         this.app.use('/', router);
     }
